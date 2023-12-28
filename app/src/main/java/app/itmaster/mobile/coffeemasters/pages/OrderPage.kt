@@ -10,7 +10,7 @@ import app.itmaster.mobile.coffeemasters.data.DataManager
 fun OrderPage(dataManager: DataManager) {
     LazyColumn {
         items(dataManager.cart) {
-            Text("${it.quantity}x ${it.product.name}")
+            Text("${it.quantity}x ${it.product.name}x ${it.product.price}")
         }
     }
 }
