@@ -108,7 +108,10 @@
 
 <script>
         function submitFeedback() {
+            AndroidInterface.submitFeedback();
+
             showSnackbar();
+
             document.getElementById("feedbackForm").reset();
         }
 
@@ -118,7 +121,7 @@
             setTimeout(function () {
                 snackbar.classList.remove("show");
             }, 3000);
-            }
+        }
     </script>
 </body>
 
