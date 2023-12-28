@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 class DataManager : ViewModel() {
     var menu: List<Category> by mutableStateOf(listOf())
     var cart: List<ItemInCart> by mutableStateOf(listOf())
+    var userName: String by mutableStateOf("")
 
     init {
         fetchData()
@@ -39,5 +40,15 @@ class DataManager : ViewModel() {
 
     fun cartRemove(product: Product) {
         cart = cart.filter { it.product != product }
+    }
+
+    // Custom function to update userName
+    fun updateUserName(name: String) {
+        userName = name
+    }
+
+    // Function to clear the cart
+    fun clearCart() {
+        cart = emptyList()
     }
 }
